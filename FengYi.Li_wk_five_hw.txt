@@ -1,0 +1,69 @@
+FengYi_Li_wk_five_hw.txt
+Homework Questions Part 2:
+
+1.	What IS form validation?
+
+Form validation is when you fill out a form on a website and and are provided with feedback regarding the data that you have entered in the various form inputs. In addition, this field is required means you can't leave that field blank. In addition, if the field is required message appears, it means that the input boolean attribute is being used called required.
+
+2.	What are the two types of client-side form validation?
+
+The two types of client side validation are one is using html5 built in form validation as has been already discussed, and involves NO JavaScript. The other DOES use JavaScript.
+
+3.	What exactly is html5 built-in form validation? Describe the one attribute that needs to be added to the form input element in order for built in form validation to work at a minimum? 
+
+Built-in form validation uses HTML5 form validation features, which this validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation. In addition, JavaScript validation is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).
+
+4.	Use the different input elements (username, password, email) we have talked about and demonstrated in class as examples of how to implement html5 built-in form validation. You can and SHOULD take from the form which you have to build for your next project as examples. That’s the idea here. A number of you used code from the Arithmetic Forms to provide examples in answers to the questions for the week 3 homework. That was really excellent! I would like to see the same happen here.
+
+
+Syntax:
+const validityState = HTMLObjectElement.validity;
+ 
+In our form.addEventListener(), HTMLObjectElement.validity refers to:
+username.validity
+email.validity
+password.validity
+
+The .validity property is a read only property just like const is read only,  that returns a ValidityState object, whose properties represent validation errors for the value of the element. In the case of our form, it refers to the input elements.
+
+
+
+5.	What is the main difference between HTML5 form validation and the JavaScript Constraint Validation API?
+
+The difference between HTML5 form validation and the JavaScript Constraint Validation API is in HTML5 built-in validation form, we can use the title attribute as a means of "customizing" our validation error messages which that the messages rendered to the user in the built-in form validation form AND the form using the Constraint Validation API is the same and it is because the value of the title attribute for each input element is the same as the the message we pass to the setCustomValidity() method. That also means, when we use the Constraint Validation API, we should not use the title attribute. That's because the title attribute would override any messages set up via JavaScript using the .setCustomValidity() method! 
+
+In addition, Built-in form validation uses HTML5 form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.For the JavaScript Constraint Validation API is if you want to have complete control over the customization of your form validation, styling and messaging, you have to use JavaScript. In addition, constraint validation API can enable to check values that users have entered into form controls, before submitting the values to the server.
+
+
+
+6.	What is the input attribute you would NOT want to use when creating a form with the JavaScript Constraint Validation API?
+
+When I creating a form with the JavaScript Constraint Validation API, I should not use the title attribute because the title attribute would override any messages set up via JavaScript using the .setCustomValidity() method!
+
+
+7.	Is client-side form validation enough by itself? Why not?
+
+No, because before submitting data to the backend (server), one has to make sure that all required input fields have been filled out, and in the correct format. i.e., valid email format, names, address, etc. This is achieved by setting up requirements which must be met via form controls.
+
+
+8.	Why would we want to use form validation when at the same time we want them to have the best UX possible on our site? Give three reasons why we would want to use form validation on our users.
+
+When a user lands on our website, we want them to have the best UX possible because we want to get all their data in the right format. If the data is not correctly formatted, it is of no use to us. We want to protect all our users' data. We want to force our users to input secure passwords, thereby protecting the information they have shared with us. We also want to protect ourselves from malicious hackers. In addition, we always need to make sure to have form validation set up on the server side. Never simply rely on the client side for form validation. There are all sorts of tools/packages available server side to implement security protocols on the backend, such as encryption (including https) and user authentication.
+
+
+9.	What is one of the most significant features of HTML5 form controls? How is this achieved?
+
+One of the most significant features of HTML5 form controls is the ability to validate most user data without JavaScript. This is achieved by using validation attributes on form elements such as required, minlength, maxlength, min, max, type, and pattern.
+
+
+10.	List seven attributes used in built-in form validation, and describe what they do.
+required: specifies whether a form field needs to be filled before the form can be submitted.
+
+minlength and maxlength: specifies the minimum and maximum length of textual data (strings)
+
+min and max: specifies the minimum and maximum values of numerical input types
+
+type: specifies whether the data needs to be a number, an email address, or some other specific preset type.
+
+pattern: specifies a regular expression that defines a pattern the entered data needs to follow.
+

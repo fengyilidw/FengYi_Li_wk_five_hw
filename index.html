@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <meta name="description" content="">
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+        <title>FengYi_Li_wk_five_hw</title>
+    </head>
+    
+    
+    <body class="mysite">
+        <div class="mysite-content">
+            <div class="wrapper">
+                <h1 id="heading">User Registration Form</h1>
+
+                <form action="submit.html" id="userForm">
+                    <input type="text" name="username" placeholder="username" pattern="^(?=.*\d)(?=.*[a-zA-Z]).{7,15}$"
+                        required>
+                    <input type="email" name="mail" placeholder="email"
+                        pattern="(\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b)" required>
+                    <input type="password" name="password" placeholder="password"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{13,24}$" required>
+                    <button type="submit" form="userForm" id="btn">Submit</button>
+                    <button id="btnReset">Reset</button>
+                </form>
+                
+                <h2>  <strong>Registration Requirement:</strong></h2>
+                <h3>
+                  Username must contain at least one number and be at least 8 characters long.
+                </h3> 
+                <h3>
+                     Password must contain at least one number, one lowercase and one uppercase letter and must be least 13 characters long, but no more than 24 characters long, containing letters, numbers or the underscore.
+                </h3>
+                
+            </div>
+        </div>
+        <footer class="mysite-footer">
+            <p>© 2020 | FengYi Li</p>
+        </footer>
+        
+        <script src="main.js" async defer></script>
+    </body>
+    
+    
+    
+</html>
